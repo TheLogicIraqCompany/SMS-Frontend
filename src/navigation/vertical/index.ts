@@ -2,9 +2,11 @@ import type { VerticalNavItems } from '@/@layouts/types'
 
 export default [
   {
-    title: 'Home',
-    to: { name: 'index' },
-    icon: { icon: 'tabler-smart-home' },
+    title: 'الصفحة الرئيسية',
+    to: { path: '/home' },
+    icon: { icon: 'tabler-home' },
+
+    // roles: ['admin'],
   },
   {
     title: 'Second page',
