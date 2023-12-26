@@ -25,39 +25,15 @@ const submit = async () => {
       isError.value = false
       isLoading.value = true
       let datat
-      if (body.value.email === 'a1@mail.com') {
+      if (body.value.email === 'admin@mail.com') {
         datat = {
           id: 'f5049358-bef9-4e48-bba0-c7719cc2b857',
-          name: 'a1',
-          email: 'a1@mail.com',
+          name: 'Admin',
+          email: 'admin@mail.com',
           phoneNamber: '0771261666',
           insertDate: '2023-08-12T13:07:17.710359',
           governorate: 'بغداد',
-          role: 'office',
-          cordinterId: null,
-        }
-      }
-      else if (body.value.email === 'a2@mail.com') {
-        datat = {
-          id: 'f5049358-bef9-4e48-bba0-c7719cc2b857',
-          name: 'a1',
-          email: 'a1@mail.com',
-          phoneNamber: '0771261666',
-          insertDate: '2023-08-12T13:07:17.710359',
-          governorate: 'بغداد',
-          role: 'merchant',
-          cordinterId: null,
-        }
-      }
-      else if (body.value.email === 'dashboard@mail.com') {
-        datat = {
-          id: 'f5049358-bef9-4e48-bba0-c7719cc2b857',
-          name: 'Dashboard',
-          email: 'dashboard@mail.com',
-          phoneNamber: '0771261666',
-          insertDate: '2023-08-12T13:07:17.710359',
-          governorate: 'بغداد',
-          role: 'dashboard',
+          role: 'admin',
           cordinterId: null,
         }
       }
