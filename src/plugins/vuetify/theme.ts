@@ -18,7 +18,7 @@ const theme: VuetifyOptions['theme'] = {
         'on-success': '#fff',
         'info': '#00CFE8',
         'on-info': '#fff',
-        'warning': '#FF9F43',
+        'warning': '#ffc107',
         'on-warning': '#fff',
         'error': '#EA5455',
         'background': '#F8F7FA',

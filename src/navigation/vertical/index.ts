@@ -9,8 +9,10 @@ export default [
     // roles: ['admin'],
   },
   {
-    title: 'Second page',
-    to: { name: 'second-page' },
-    icon: { icon: 'tabler-file' },
+    title: 'المحفظة  ',
+    to: { path: '/balance' },
+    icon: { icon: 'tabler-coins' },
+
+    // roles: ['admin'],
   },
 ] as VerticalNavItems

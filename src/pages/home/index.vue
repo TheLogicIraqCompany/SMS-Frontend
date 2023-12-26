@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import EcommerceCongratulationsJohn from './EcommerceCongratulationsJohn.vue'
+import Balance from './balance.vue'
 import EcommerceEarningReports from './EcommerceEarningReports.vue'
 import EcommerceExpensesRadialBarCharts from './EcommerceExpensesRadialBarCharts.vue'
 import EcommerceGeneratedLeads from './EcommerceGeneratedLeads.vue'
@@ -21,7 +21,7 @@ import EcommerceTransactions from './EcommerceTransactions.vue'
       md="5"
       lg="4"
     >
-      <EcommerceCongratulationsJohn />
+      <Balance />
     </VCol>
 
     <!-- 👉 Ecommerce Transition -->
