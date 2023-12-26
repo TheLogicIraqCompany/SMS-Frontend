@@ -1,38 +1,34 @@
 <script setup lang="ts">
 const statistics = [
   {
-    title: 'Sales',
-    stats: '230k',
-    icon: 'tabler-chart-pie-2',
+    title: '  الرصيد الكلي',
+    stats: '50',
+    icon: 'tabler-messages',
     color: 'primary',
   },
   {
-    title: 'Customers',
-    stats: '8.549k',
-    icon: 'tabler-users',
-    color: 'info',
+    title: 'الرسائل النصية',
+    stats: '15',
+    icon: 'tabler-brand-messenger',
+    color: 'warning',
   },
   {
-    title: 'Products',
-    stats: '1.423k',
-    icon: 'tabler-shopping-cart',
+    title: 'واتساب',
+    stats: '15',
+    icon: 'tabler-brand-whatsapp',
     color: 'error',
   },
   {
-    title: 'Revenue',
-    stats: '$9745',
-    icon: 'tabler-currency-dollar',
+    title: 'تلكرام',
+    stats: '20',
+    icon: 'tabler-brand-telegram',
     color: 'success',
   },
 ]
 </script>
 
 <template>
-  <VCard title="Statistics">
-    <template #append>
-      <span class="text-sm text-disabled">Updated 1 month ago</span>
-    </template>
-
+  <VCard title="الرسائل">
     <VCardText class="pt-6">
       <VRow>
         <VCol

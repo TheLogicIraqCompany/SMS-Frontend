@@ -8,9 +8,9 @@ import EcommerceGeneratedLeads from './EcommerceGeneratedLeads.vue'
 import EcommerceOrder from './EcommerceOrder.vue'
 import EcommercePopularProducts from './EcommercePopularProducts.vue'
 import EcommerceRevenueReport from './EcommerceRevenueReport.vue'
-import EcommerceStatistics from './EcommerceStatistics.vue'
 import EcommerceTotalProfitLineCharts from './EcommerceTotalProfitLineCharts.vue'
 import EcommerceTransactions from './EcommerceTransactions.vue'
+import MessageTypes from './messageTypes.vue'
 </script>
 
 <template>
@@ -30,7 +30,7 @@ import EcommerceTransactions from './EcommerceTransactions.vue'
       md="7"
       lg="8"
     >
-      <EcommerceStatistics class="h-100" />
+      <MessageTypes class="h-100" />
     </VCol>
 
     <VCol
