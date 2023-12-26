@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { Component } from 'vue'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
-import { VNodeRenderer } from './VNodeRenderer'
 import { injectionKeyIsVerticalNavHovered, useLayouts } from '@layouts'
 import { VerticalNavGroup, VerticalNavLink, VerticalNavSectionTitle } from '@layouts/components'
 import { config } from '@layouts/config'
@@ -78,8 +77,11 @@ const handleNavScroll = (evt: Event) => {
           to="/"
           class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
         >
-          <VNodeRenderer :nodes="config.app.logo" />
-
+          <!-- <VNodeRenderer :nodes="config.app.logo" /> -->
+          <img
+            src="@images/digitllogic_logo.jpg"
+            width="40"
+          >
           <Transition name="vertical-nav-app-title">
             <h1
               v-show="!hideTitleAndIcon"
