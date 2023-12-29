@@ -308,7 +308,7 @@ const chartOptions = computed(() => {
             size="small"
             class="d-flex mx-auto"
           >
-            <span>2022</span>
+            <span>2023</span>
             <template #append>
               <VIcon
                 size="16"
@@ -330,11 +330,11 @@ const chartOptions = computed(() => {
 
           <div class="d-flex flex-column mt-8">
             <h3 class="font-weight-medium text-h3">
-              $25,825
+              500000 د.ع
             </h3>
             <p>
-              <span class="text-high-emphasis font-weight-medium me-1">Budget:</span>
-              <span>56,800</span>
+              <span class="text-high-emphasis font-weight-medium me-1">الرسائل:</span>
+              <span>50</span>
             </p>
           </div>
 
@@ -345,7 +345,7 @@ const chartOptions = computed(() => {
           />
 
           <VBtn class="mt-4">
-            Increase Budget
+            زيادة الرسائل
           </VBtn>
         </VCardText>
       </VCol>
