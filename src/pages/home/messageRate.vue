@@ -91,10 +91,10 @@ const chartOptions = computed(() => {
               showAlways: true,
               color: currentTheme.success,
               fontSize: '.8125rem',
-              label: 'Total',
+              label: 'الكلي',
               fontFamily: 'Public Sans',
               formatter() {
-                return '184'
+                return '50'
               },
             },
           },
@@ -125,14 +125,14 @@ const chartOptions = computed(() => {
       <div class="d-flex flex-column">
         <div class="mb-auto">
           <h5 class="text-h5 text-no-wrap">
-            Generated Leads
+            الرسائل
           </h5>
-          <span class="text-sm">Monthly Report</span>
+          <span class="text-sm">  التقارير الشهرية</span>
         </div>
 
         <div>
           <h3 class="text-h3 mb-1">
-            4,350
+            10
           </h3>
           <div>
             <VIcon
@@ -140,7 +140,7 @@ const chartOptions = computed(() => {
               color="success"
               class="me-1"
             />
-            <span class="text-success font-weight-medium">15.8% </span>
+            <span class="text-success font-weight-medium">20% </span>
           </div>
         </div>
       </div>

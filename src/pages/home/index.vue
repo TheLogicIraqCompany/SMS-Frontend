@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import Balance from './balance.vue'
 import EcommerceEarningReports from './EcommerceEarningReports.vue'
-import EcommerceExpensesRadialBarCharts from './EcommerceExpensesRadialBarCharts.vue'
-import EcommerceGeneratedLeads from './EcommerceGeneratedLeads.vue'
+import Balance from './balance.vue'
+import MessageRate from './messageRate.vue'
+import MessagesSentRate from './messagesSentRate.vue'
 
 // import EcommerceInvoiceTable from './EcommerceInvoiceTable.vue'
 import EcommerceOrder from './EcommerceOrder.vue'
 import EcommercePopularProducts from './EcommercePopularProducts.vue'
-import EcommerceRevenueReport from './EcommerceRevenueReport.vue'
-import EcommerceTotalProfitLineCharts from './EcommerceTotalProfitLineCharts.vue'
 import EcommerceTransactions from './EcommerceTransactions.vue'
 import MessageTypes from './messageTypes.vue'
+import MessagesSentRateLastMonth from './messagesSentRateLastMonth.vue'
+import RevenueReport from './revenueReport.vue'
 </script>
 
 <template>
   <VRow class="match-height">
-    <!-- 👉 Congratulation John -->
+    <!-- 👉 Balance -->
     <VCol
       cols="12"
       md="5"
@@ -24,7 +24,7 @@ import MessageTypes from './messageTypes.vue'
       <Balance />
     </VCol>
 
-    <!-- 👉 Ecommerce Transition -->
+    <!-- 👉 MessageTypes -->
     <VCol
       cols="12"
       md="7"
@@ -38,33 +38,33 @@ import MessageTypes from './messageTypes.vue'
       lg="4"
     >
       <VRow>
-        <!-- 👉 Expenses Radial Bar Charts -->
+        <!-- 👉 messagesSentRate -->
         <VCol
           cols="12"
           lg="6"
           md="3"
           sm="6"
         >
-          <EcommerceExpensesRadialBarCharts />
+          <MessagesSentRate />
         </VCol>
 
-        <!-- 👉 Total Profit Line -->
+        <!-- 👉 messagesSentRateLastMonth -->
         <VCol
           cols="12"
           lg="6"
           md="3"
           sm="6"
         >
-          <EcommerceTotalProfitLineCharts />
+          <MessagesSentRateLastMonth />
         </VCol>
 
-        <!-- 👉 Generated Leads -->
+        <!-- 👉 messageRate -->
         <VCol
           cols="12"
           md="6"
           lg="12"
         >
-          <EcommerceGeneratedLeads />
+          <MessageRate />
         </VCol>
       </VRow>
     </VCol>
@@ -74,7 +74,7 @@ import MessageTypes from './messageTypes.vue'
       cols="12"
       lg="8"
     >
-      <EcommerceRevenueReport />
+      <RevenueReport />
     </VCol>
 
     <!-- 👉 Earning Reports -->

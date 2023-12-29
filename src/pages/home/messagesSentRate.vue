@@ -134,9 +134,9 @@ const chartOptions = computed(() => {
     <VCardText>
       <div class="mb-n2">
         <h5 class="text-h5">
-          82.5k
+          10
         </h5>
-        <span class="text-disabled text-sm">Expenses</span>
+        <span class="text-disabled text-sm">رسائل مرسلة</span>
       </div>
 
       <VueApexCharts
@@ -147,7 +147,7 @@ const chartOptions = computed(() => {
       />
 
       <div class="text-sm text-center clamp-text text-disabled mt-3">
-        $21k Expenses more than last month
+        الرسائل المرسلة لهذا الشهر
       </div>
     </VCardText>
   </VCard>

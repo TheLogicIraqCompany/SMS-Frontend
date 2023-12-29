@@ -110,9 +110,9 @@ const chartOptions = computed(() => {
     <VCardText>
       <div>
         <h5 class="text-h5">
-          Profit
+          الرسائل المرسلة
         </h5>
-        <span class="text-disabled text-sm">Last Month</span>
+        <span class="text-disabled text-sm">  الشهر السابق</span>
       </div>
 
       <VueApexCharts
@@ -124,10 +124,10 @@ const chartOptions = computed(() => {
 
       <div class="d-flex align-center justify-space-between mt-3">
         <h4 class="text-h4 text-center font-weight-medium">
-          624k
+          10
         </h4>
         <span class="text-sm text-success">
-          +8.24%
+          +50%
         </span>
       </div>
     </VCardText>

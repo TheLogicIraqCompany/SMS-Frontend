@@ -8,11 +8,11 @@ const vuetifyTheme = useTheme()
 const series = {
   bar: [
     {
-      name: 'Earning',
+      name: 'تلكرام',
       data: [270, 210, 180, 200, 250, 280, 250, 270, 150],
     },
     {
-      name: 'Expense',
+      name: 'واتساب',
       data: [-140, -160, -180, -150, -100, -60, -80, -100, -180],
     },
   ],
@@ -56,7 +56,7 @@ const chartOptions = computed(() => {
           endingShape: 'rounded',
         },
       },
-      colors: [`rgba(${hexToRgb(currentTheme.primary)}, 1)`, `rgba(${hexToRgb(currentTheme.warning)}, 1)`],
+      colors: [`rgba(${hexToRgb(currentTheme.info)}, 1)`, `rgba(${hexToRgb(currentTheme.success)}, 1)`],
       dataLabels: {
         enabled: false,
       },
@@ -287,7 +287,7 @@ const chartOptions = computed(() => {
       >
         <VCardText class="pe-2">
           <h5 class="text-h5 mb-6">
-            Revenue Report
+            التقارير السنوية
           </h5>
 
           <VueApexCharts
