@@ -47,7 +47,7 @@ import RevenueReport from './revenueReport.vue'
         >
           <MessagesSentRate />
         </VCol>
-
+        hh
         <!-- 👉 messagesSentRateLastMonth -->
         <VCol
           cols="12"
