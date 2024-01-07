@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import { useUserStore } from '@/stores/UserStore'
 import { useLayouts } from '@layouts'
 import { config } from '@layouts/config'
-import { can } from '@layouts/plugins/casl'
 import type { NavSectionTitle } from '@layouts/types'
 
 defineProps<{
@@ -11,11 +11,12 @@ defineProps<{
 const { isVerticalNavMini, dynamicI18nProps } = useLayouts()
 const { width: windowWidth } = useWindowSize()
 const shallRenderIcon = isVerticalNavMini(windowWidth)
+const { havePermission } = useUserStore()
 </script>
 
 <template>
   <li
-    v-if="can(item.action, item.subject)"
+    v-if="havePermission(item.permission)"
     class="nav-section-title"
   >
     <div class="title-wrapper">

@@ -1,4 +1,4 @@
-import type { VerticalNavItems } from '@/@layouts/types'
+import type { HorizontalNavItems } from '@layouts/types'
 
 export default [
   {
@@ -29,4 +29,4 @@ export default [
 
     // roles: ['admin'],
   },
-] as VerticalNavItems
+] as HorizontalNavItems
