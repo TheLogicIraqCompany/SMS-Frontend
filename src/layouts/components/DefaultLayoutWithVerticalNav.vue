@@ -3,7 +3,6 @@ import navItems from '@/navigation/vertical'
 import { useThemeConfig } from '@core/composable/useThemeConfig'
 
 // Components
-import Footer from '@/layouts/components/Footer.vue'
 import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
 
@@ -30,26 +29,27 @@ const { width: windowWidth } = useWindowSize()
             icon="tabler-menu-2"
           />
         </IconBtn>
-
-        <NavbarThemeSwitcher />
+        <h1 class="text-h4 font-weight-regular ">
+          الوكالات البحرية
+        </h1>
 
         <VSpacer />
+        <NavbarThemeSwitcher class="ml-5" />
 
         <UserProfile />
       </div>
     </template>
 
     <!-- 👉 Pages -->
-    <RouterView v-slot="{ Component }">
-      <Transition
-        :name="appRouteTransition"
-        mode="out-in"
-      >
-        <Component :is="Component" />
-      </Transition>
+    <RouterView
+      v-slot="{ Component }"
+      class="mt-5"
+    >
+      <Component :is="Component" />
     </RouterView>
 
     <!-- 👉 Footer -->
+
     <template #footer>
       <Footer />
     </template>

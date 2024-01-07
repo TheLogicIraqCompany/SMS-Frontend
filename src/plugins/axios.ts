@@ -1,10 +1,14 @@
+/* eslint-disable regex/invalid */
 import axios from 'axios'
+import { toast } from 'vue3-toastify'
 import router from '@/router'
 
 const axiosIns = axios.create({
   // You can add your headers here
   // ================================
-  // baseURL: 'https://some-domain.com/api/',
+  // baseURL: 'https://epp-v2-api.digital-logic.tech/api',
+  baseURL: 'http://95.179.133.4:3315',
+
   // timeout: 1000,
   // headers: {'X-Custom-Header': 'foobar'}
 })
@@ -15,15 +19,16 @@ axiosIns.interceptors.request.use(config => {
   const token = localStorage.getItem('accessToken')
 
   // If token is found
-  if (token) {
-    // Get request headers and if headers is undefined assign blank object
-    config.headers = config.headers || {}
+  // if (token) {
+  // Get request headers and if headers is undefined assign blank object
+  config.headers = config.headers || {}
+  config.headers['Accept-Language'] = 'ar'
 
-    // Set authorization header
-    // ℹ️ JSON.parse will convert token to string
-    config.headers.Authorization = token ? `Bearer ${JSON.parse(token)}` : ''
-  }
+  // Set authorization header
+  // ℹ️ JSON.parse will convert token to string
+  config.headers.Authorization = token ? `Bearer ${token}` : ''
 
+  // }
   // Return modified config
   return config
 })
@@ -32,6 +37,8 @@ axiosIns.interceptors.request.use(config => {
 axiosIns.interceptors.response.use(response => {
   return response
 }, error => {
+  console.log(error)
+
   // Handle error
   if (error.response.status === 401) {
     // ℹ️ Logout user and redirect to login page
@@ -46,6 +53,14 @@ axiosIns.interceptors.response.use(response => {
     router.push('/login')
   }
   else {
+    if (error.response.data) {
+      if (error.response.status > 499)
+        toast.error('حدث خطأ ما يرجى المحاولة مرة أخرى')
+
+      else
+        toast.error(error.response.data.message)
+    }
+
     return Promise.reject(error)
   }
 })
