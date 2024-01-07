@@ -9,6 +9,13 @@ export default [
     // roles: ['admin'],
   },
   {
+    title: 'الرسائل  ',
+    to: { path: '/messages' },
+    icon: { icon: 'tabler-messages' },
+
+    // roles: ['admin'],
+  },
+  {
     title: 'المحفظة  ',
     to: { path: '/balance' },
     icon: { icon: 'tabler-coins' },
