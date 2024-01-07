@@ -16,6 +16,13 @@ export default [
     // roles: ['admin'],
   },
   {
+    title: 'المشاريع  ',
+    to: { path: '/projects' },
+    icon: { icon: 'tabler-devices-down' },
+
+    // roles: ['admin'],
+  },
+  {
     title: 'المحفظة  ',
     to: { path: '/balance' },
     icon: { icon: 'tabler-coins' },

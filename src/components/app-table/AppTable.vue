@@ -81,9 +81,10 @@ const getData = async () => {
       const response = await axios.get<Response<any>>(props.urls.get, {
         params: {
           ...params,
-          take: pageSize.value,
-          skip: (currentPage.value - 1),
-          deleted: false,
+
+          // take: pageSize.value,
+          // skip: (currentPage.value - 1),
+          // deleted: false,
         },
       })
 
