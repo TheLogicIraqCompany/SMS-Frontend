@@ -12,13 +12,12 @@ export default [
     title: 'الرسائل  ',
     to: { path: '/messages' },
     icon: { icon: 'tabler-messages' },
-
     // roles: ['admin'],
   },
   {
     title: 'المشاريع  ',
     to: { path: '/projects' },
-    icon: { icon: 'tabler-devices-down' },
+    icon: { icon: 'tabler-devices' },
 
     // roles: ['admin'],
   },

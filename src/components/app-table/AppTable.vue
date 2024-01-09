@@ -35,7 +35,8 @@ interface Props {
   openForm?: () => void
   onRowClick?: (item: any) => void
   viewType?: ViewType
-  hideViewType?: boolean
+  hideViewType?: boolean 
+  
 }
 
 const isLoading = ref(false)
