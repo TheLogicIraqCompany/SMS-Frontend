@@ -1,19 +1,56 @@
 <script setup lang="ts">
 import type { TableField } from '../../components/app-table/types'
+import { FieldType } from './../../components/app-form/types'
 import AppTable from './../../components/app-table/AppTable.vue'
+import select from './../../fake-data/select'
+import { requiredValidator } from '@/@core/utils/validators'
+
+const urls: ApiUrls = {
+  get: '/Message/Message-History',
+  delete: '/Message/Message-History',
+  create: '/Message/Message-History',
+  update: '/Message/Message-History',
+}
 
 const fields: TableField[] = [
   {
-    key: 'project-name',
-    label: ' الاسم المشروع',
+    key: 'ProjectId',
+    label: ' اسم المشروع',
+    filterable: true,
+    create: true,
+    field: {
+      cols: 6,
+      type: FieldType.Select,
+      validations: [requiredValidator],
+      options: {
+        items: [],
+      },
+    },
   },
   {
-    key: 'type',
+    key: 'ProjectId',
     label: 'نوع الرسالة',
+    filterable: true,
+    create: true,
+    field: {
+      cols: 6,
+      type: FieldType.Select,
+      validations: [requiredValidator],
+      options: {
+        items: select.messageType,
+      },
+    },
   },
   {
-    key: 'message',
+    key: 'Messagetext',
     label: 'الرسالة',
+    create: true,
+    field: {
+      cols: 12,
+      type: FieldType.Textarea,
+      validations: [requiredValidator],
+
+    },
   },
 ]
 </script>
@@ -23,10 +60,9 @@ const fields: TableField[] = [
     :fields="fields"
     title="الرسائل    "
     pagination
-    disable-crud
-    hide-delete
-    hide-edit
-    add-btn-text="s"
+    add-btn-text="اضافة رسالة"
+    have-actions
+    :urls="urls"
   >
     <template #status="{ item }">
       <VChip :color="item.status === 'pending' ? 'warning' : item.status === 'stopped' ? 'error' : item.status === 'moving' ? 'success' : 'primary'">
