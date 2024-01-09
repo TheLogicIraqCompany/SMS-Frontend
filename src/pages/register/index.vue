@@ -34,11 +34,11 @@ const submit = async () => {
   console.log(PhoneNumber)
   if ((await refVForm.value?.validate())?.valid) {
     try {
-      const res = await axiosIns.post('/User/register', {
+      const res = await axiosIns.post('/api/User/register', {
         FullName: body.value.FullName,
-        email: body.value.email,
+        Email: body.value.email,
         PhoneNumber: body.value.PhoneNumber,
-        password: body.value.password,
+        Password: body.value.password,
       })
 
       userStore.setUser(res.data.result)

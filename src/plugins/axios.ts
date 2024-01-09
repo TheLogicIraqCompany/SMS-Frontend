@@ -7,7 +7,7 @@ const axiosIns = axios.create({
   // You can add your headers here
   // ================================
   // baseURL: 'https://epp-v2-api.digital-logic.tech/api',
-  baseURL: 'http://95.179.133.4:3315',
+  baseURL: 'http://localhost:5245/',
 
   // timeout: 1000,
   // headers: {'X-Custom-Header': 'foobar'}
