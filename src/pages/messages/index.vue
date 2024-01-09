@@ -42,6 +42,17 @@ const fields: TableField[] = [
     },
   },
   {
+    key: 'ListPhoneNumberExcel',
+    label: 'رقم الهاتف',
+    create: true,
+    field: {
+      cols: 6,
+      type: FieldType.File,
+      validations: [requiredValidator],
+
+    },
+  },
+  {
     key: 'Messagetext',
     label: 'الرسالة',
     create: true,
