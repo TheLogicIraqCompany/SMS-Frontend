@@ -4,48 +4,48 @@ import UnAuthPageLayout from './../../components/reusable-page/UnAuthPageLayout.
 
 import { emailValidator, requiredValidator } from '@/@core/utils/validators'
 import type { LoginBody } from '@/models/login'
+import axiosIns from '@/plugins/axios'
 import { useUserStore } from '@/stores/UserStore'
+import 'vue3-tel-input/dist/vue3-tel-input.css'
 
 const router = useRouter()
 const isPasswordVisible = ref(false)
 const userStore = useUserStore()
-
 const refVForm = ref<VForm>()
 
 const body = ref<LoginBody>({
+  FullName: '',
   email: '',
+  PhoneNumber: '',
   password: '',
 })
 
+const PhoneNumber = ref(null)
 const isError = ref(false)
 const isLoading = ref(false)
+function onPhoneNumberChange(e) {
+  PhoneNumber.value = e
+  console.log(e)
+  console.log('_____')
+  console.log(PhoneNumber)
+}
 
 const submit = async () => {
+  console.log(PhoneNumber)
   if ((await refVForm.value?.validate())?.valid) {
     try {
-      isError.value = false
-      isLoading.value = true
-      let datat
-      if (body.value.email === 'admin@mail.com') {
-        datat = {
-          id: 'f5049358-bef9-4e48-bba0-c7719cc2b857',
-          name: 'Admin',
-          email: 'admin@mail.com',
-          phoneNamber: '0771261666',
-          insertDate: '2023-08-12T13:07:17.710359',
-          governorate: 'بغداد',
-          role: 'admin',
-          cordinterId: null,
-        }
-      }
+      const res = await axiosIns.post('/User/register', {
+        FullName: body.value.FullName,
+        email: body.value.email,
+        PhoneNumber: body.value.PhoneNumber,
+        password: body.value.password,
+      })
 
-      // const res = await axios.post('/Auth/Login', body.value)
-      userStore.setUser(datat)
+      userStore.setUser(res.data.result)
 
-      // localStorage.setItem('accessToken', res.data.token)
-      localStorage.setItem('accessToken', '5455555')
+      localStorage.setItem('accessToken', res.data.result.token)
 
-      router.push(pushTo(userStore.user.role))
+      window.location.reload()
     }
     catch (error) {
       isError.value = true
@@ -83,6 +83,34 @@ onMounted(() => {
           lazy-validation
           @submit.prevent="submit"
         >
+          <VTextField
+            v-model="body.FullName"
+            :rules="[requiredValidator]"
+            outlined
+            label="الاسم الكامل"
+            required
+            prepend-inner-icon="tabler-user"
+          />
+          <!--
+            <VueTelInput
+            style="direction: ltr; text-align: end;"
+            class="my-4"
+            :input-options="{ placeholder: 'رقم الهاتف' }"
+            :rules="[requiredValidator]"
+            :model-value="PhoneNumber"
+            @update:modelValue="onPhoneNumberChange"
+            />
+          -->
+          <VTextField
+            v-model="body.PhoneNumber"
+            :rules="[requiredValidator]"
+            outlined
+            label="رقم الهاتف"
+            required
+            class="my-4"
+
+            prepend-inner-icon="tabler-phone"
+          />
           <VTextField
             v-model="body.email"
             :rules="[requiredValidator, emailValidator]"

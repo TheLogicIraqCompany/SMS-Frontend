@@ -33,10 +33,7 @@ const hasSlot = (name: string) => !!slots[name]
             cols="12"
             md="4"
           >
-            <VCard
-              :loading="isLoading"
-              class="mt-10 mx-md-10"
-            >
+            <VCard class="mt-10 mx-md-10">
               <slot name="formPage" />
             </VCard>
           </VCol>

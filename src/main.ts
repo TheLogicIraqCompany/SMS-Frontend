@@ -10,6 +10,9 @@ import '@styles/styles.scss'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 
+import vuetelinput from 'vue-tel-input'
+import 'vue-tel-input/dist/vue-tel-input.css'
+
 loadFonts()
 
 // Create vue app
@@ -20,6 +23,8 @@ app.use(vuetify)
 app.use(createPinia())
 app.use(router)
 app.use(layoutsPlugin)
+
+app.use(vuetelinput)
 
 // Mount vue app
 app.mount('#app')

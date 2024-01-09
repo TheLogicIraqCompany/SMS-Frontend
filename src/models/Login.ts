@@ -1,4 +1,6 @@
 export interface LoginBody {
-  phoneNumber: string,
+  FullName: string
+  email: string
+  PhoneNumber: string
   password: string
 }

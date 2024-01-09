@@ -217,6 +217,15 @@ tbody {
   font-family: Cairo !important;
 }
 
+.vue-tel-input {
+  border-radius: 6px !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+  padding-inline-end: 7px !important;
+  text-align: end !important;
+}
+
 @keyframes slide-in {
   0% {
     inline-size: 10px;
