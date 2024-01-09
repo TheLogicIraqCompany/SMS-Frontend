@@ -26,7 +26,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.name !== 'login') {
+  if (to.name !== 'login' && to.name != 'register') {
     if (isLoggedIn()) {
       const userData = JSON.parse(localStorage.getItem('userData') as string)
 

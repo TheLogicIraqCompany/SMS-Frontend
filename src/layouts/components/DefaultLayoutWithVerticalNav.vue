@@ -30,7 +30,7 @@ const { width: windowWidth } = useWindowSize()
           />
         </IconBtn>
         <h1 class="text-h4 font-weight-regular ">
-          الوكالات البحرية
+          خدمة الرسائل
         </h1>
 
         <VSpacer />

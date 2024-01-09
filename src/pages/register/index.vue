@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { VForm } from 'vuetify/components/VForm'
-import UnAuthPageLayout from './../components/reusable-page/UnAuthPageLayout.vue'
+import UnAuthPageLayout from './../../components/reusable-page/UnAuthPageLayout.vue'
 
 import { emailValidator, requiredValidator } from '@/@core/utils/validators'
 import type { LoginBody } from '@/models/login'
@@ -75,7 +75,7 @@ onMounted(() => {
   <UnAuthPageLayout>
     <template #formPage>
       <VCardTitle class="d-flex flex-column text-centerن">
-        <span class="my-5"> تسجيل الدخول </span>
+        <span class="my-5">   انشاء حساب </span>
       </VCardTitle>
       <VCardText>
         <VForm
@@ -123,7 +123,7 @@ onMounted(() => {
               block
               type="submit"
             >
-              تسجيل الدخول
+              انشاء حساب
             </VBtn>
           </div>
 
@@ -132,13 +132,13 @@ onMounted(() => {
             cols="12"
             class="text-center"
           >
-            <span>هل لديك حساب
+            <span> هل لديك حساب بالفعل
               ؟</span>
             <RouterLink
               class="text-info ms-2"
-              :to="{ name: 'register' }"
+              :to="{ name: 'login' }"
             >
-              انشاء حساب
+              تسجيل الدخول
             </RouterLink>
           </VCol>
         </VForm>

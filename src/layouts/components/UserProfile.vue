@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores/UserStore';
-import avatar1 from '@images/avatars/avatar-1.png';
+import { useUserStore } from '@/stores/UserStore'
 
 const userStore = useUserStore()
 
@@ -11,20 +10,45 @@ const logout = () => {
 </script>
 
 <template>
-  <VBadge dot location="bottom right" offset-x="3" offset-y="3" bordered color="success">
-    <VAvatar class="cursor-pointer" color="primary" variant="tonal">
-      <VImg :src="avatar1" />
+  <VBadge
+    dot
+    location="bottom right"
+    offset-x="3"
+    offset-y="3"
+    bordered
+    color="success"
+  >
+    <VAvatar
+      class="cursor-pointer"
+      color="primary"
+      variant="tonal"
+    >
+      <!-- <VImg :src="avatar1" /> -->
 
       <!-- SECTION Menu -->
-      <VMenu activator="parent" width="230" location="bottom end" offset="14px">
+      <VMenu
+        activator="parent"
+        width="230"
+        location="bottom end"
+        offset="14px"
+      >
         <VList>
           <!-- 👉 User Avatar & Name -->
           <VListItem>
             <template #prepend>
               <VListItemAction start>
-                <VBadge dot location="bottom right" offset-x="3" offset-y="3" color="success">
-                  <VAvatar color="primary" variant="tonal">
-                    <VImg :src="avatar1" />
+                <VBadge
+                  dot
+                  location="bottom right"
+                  offset-x="3"
+                  offset-y="3"
+                  color="success"
+                >
+                  <VAvatar
+                    color="primary"
+                    variant="tonal"
+                  >
+                    <!-- <VImg :src="avatar1" /> -->
                   </VAvatar>
                 </VBadge>
               </VListItemAction>
@@ -43,10 +67,14 @@ const logout = () => {
           <!-- 👉 Logout -->
           <VListItem @click="logout">
             <template #prepend>
-              <VIcon class="me-2" icon="tabler-logout" size="22" />
+              <VIcon
+                class="me-2"
+                icon="tabler-logout"
+                size="22"
+              />
             </template>
 
-            <VListItemTitle>تسجيل خروج</VListItemTitle>
+            <VListItemTitle>تسجيل الخروج</VListItemTitle>
           </VListItem>
         </VList>
       </VMenu>
