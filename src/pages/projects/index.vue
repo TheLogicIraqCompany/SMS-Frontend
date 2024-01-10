@@ -34,5 +34,6 @@ const urls: ApiUrls = {
     :urls="urls"
     add-btn-text="اضافة مشروع"
     have-actions
+    view-type="0"
   />
 </template>

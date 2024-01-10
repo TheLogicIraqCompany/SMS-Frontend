@@ -33,7 +33,6 @@ const fields: TableField[] = [
   {
     key: 'ProjectId',
     label: 'نوع الرسالة',
-    filterable: true,
   },
   {
     key: 'ListPhoneNumberExcel',

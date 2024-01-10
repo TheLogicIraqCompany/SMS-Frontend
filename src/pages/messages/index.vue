@@ -16,7 +16,6 @@ const fields: TableField[] = [
   {
     key: 'ProjectId',
     label: ' اسم المشروع',
-    filterable: true,
     create: true,
     field: {
       cols: 6,
@@ -30,7 +29,6 @@ const fields: TableField[] = [
   {
     key: 'ProjectId',
     label: 'نوع الرسالة',
-    filterable: true,
     create: true,
     field: {
       cols: 6,
@@ -74,6 +72,7 @@ const fields: TableField[] = [
     add-btn-text="اضافة رسالة"
     have-actions
     :urls="urls"
+    view-type="0"
   >
     <template #status="{ item }">
       <VChip :color="item.status === 'pending' ? 'warning' : item.status === 'stopped' ? 'error' : item.status === 'moving' ? 'success' : 'primary'">
